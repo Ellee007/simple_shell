@@ -13,18 +13,18 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int i, j = 0;
+	int a, b = 0;
 
-	for (i = 0; dest[i] != '\0'; i++)
+	for (a = 0; dest[a] != '\0'; a++)
 	{
 	}
-	for (j = 0; src[j] != '\0'; j++)
+	for (b = 0; src[b] != '\0'; b++)
 	{
-		dest[i] = src[j];
-		i++;
+		dest[a] = src[b];
+		a++;
 
 	}
-	dest[i] = '\0';
+	dest[a] = '\0';
 return (dest);
 }
 
@@ -42,12 +42,12 @@ return (dest);
 
 int _strcmp(char *s1, char *s2)
 {
-	int i = 0;
+	int a = 0;
 	int val;
 
-	while (s1[i] != 0 && s2[i] != 0 && s1[i] == s2[i])
-		i++;
-val = s1[i] - s2[i];
+	while (s1[a] != 0 && s2[a] != 0 && s1[a] == s2[a])
+		a++;
+val = s1[a] - s2[a];
 return (val);
 
 }
@@ -60,12 +60,12 @@ return (val);
 
 int _strlen(char *s)
 {
-	int i;
+	int a;
 
-	for (i = 0; s[i] != 0; i++)
+	for (a = 0; s[a] != 0; a++)
 		;
 
-	return (i);
+	return (a);
 }
 
 /**
@@ -78,15 +78,15 @@ int _strlen(char *s)
 
 size_t _strncmp(char *s1, char *s2, size_t n)
 {
-	size_t i, j;
+	size_t a, b;
 
-	for (j = 0; s1[j] != '\0' && j < n; j++)
+	for (b = 0; s1[b] != '\0' && b < n; b++)
 	{
-		i = s1[j] - s2[j];
+		i = s1[b] - s2[b];
 
-		if (i != 0)
+		if (a != 0)
 		{
-			return (i);
+			return (a);
 		}
 	}
 	return (0);
@@ -102,12 +102,12 @@ size_t _strncmp(char *s1, char *s2, size_t n)
 
 char *_strcpy(char *dest, char *src)
 {
-	int i = 0;
+	int a = 0;
 
-	for (i = 0; src[i] != '\0'; i++)
+	for (a = 0; src[a] != '\0'; a++)
 	{
-		dest[i] = src[i];
+		dest[a] = src[a];
 	}
-	dest[i + 1] = 0;
+	dest[a + 1] = 0;
 	return (dest);
 }

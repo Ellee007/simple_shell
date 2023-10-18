@@ -9,15 +9,15 @@ char **tokenize(char *lineptr)
 {
 	char **user_command = NULL;
 	char *token = NULL;
-	size_t i = 0;
+	size_t a = 0;
 	int size = 0;
 
 	if (lineptr == NULL)
 		return (NULL);
 
-	for (i = 0; lineptr[i]; i++)
+	for (a = 0; lineptr[a]; a++)
 	{
-		if (lineptr[i] == ' ')
+		if (lineptr[a] == ' ')
 			size++;
 	}
 	if ((size + 1) == _strlen(lineptr))
@@ -28,11 +28,11 @@ char **tokenize(char *lineptr)
 
 	token = strtok(lineptr, " \n\t\r");
 
-	for (i = 0; token != NULL; i++)
+	for (a = 0; token != NULL; a++)
 	{
-		user_command[i] = token;
+		user_command[a] = token;
 		token = strtok(NULL, " \n\t\r");
 	}
-	user_command[i] = NULL;
+	user_command[a] = NULL;
 	return (user_command);
 }
